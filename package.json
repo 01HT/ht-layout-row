@@ -1,12 +1,11 @@
 {
   "name": "ht-layout-row",
-  "flat": true,
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "ht-layout-row.js",
   "repository": "https://github.com/maksimyurkov/ht-layout-row",
   "author": "maksimyurkov <yurkov.maksim.sergeevich@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@polymer/lit-element": "^3.0.0-pre.10"
+    "@polymer/lit-element": "@next"
   }
 }
