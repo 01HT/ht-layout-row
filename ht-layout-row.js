@@ -1,5 +1,5 @@
 "use strict";
-import { LitElement, html } from "../@polymer/lit-element/lit-element.js";
+import { LitElement, html } from "@polymer/lit-element";
 
 class HTLayoutRow extends LitElement {
   render({ card }) {
