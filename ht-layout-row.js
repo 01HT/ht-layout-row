@@ -23,6 +23,7 @@ class HTLayoutRow extends LitElement {
           padding:16px;
           background:#fff;
           max-width: ${containerWidth};
+          overflow:hidden;
         }
 
         @media (max-width:600px) {
