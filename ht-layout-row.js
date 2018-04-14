@@ -21,7 +21,7 @@ class HTLayoutRow extends LitElement {
           max-width: 1440px;
           position:relative;
           padding:16px;
-          background:#fff;
+          ${card ? "background:#fff;" : ""}
           max-width: ${containerWidth};
           overflow:hidden;
         }
