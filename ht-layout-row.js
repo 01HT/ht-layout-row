@@ -2,7 +2,7 @@
 import { LitElement, html } from "@polymer/lit-element";
 
 class HTLayoutRow extends LitElement {
-  render({ card, containerWidth }) {
+  _render({ card, containerWidth }) {
     return html`
       <style>
         :host {
