@@ -21,8 +21,6 @@ class HTLayoutRow extends LitElement {
           max-width: 1440px;
           position:relative;
           padding:16px;
-          ${card ? "background:#fff;" : ""}
-          max-width: ${containerWidth};
           overflow:hidden;
         }
 
@@ -46,7 +44,7 @@ class HTLayoutRow extends LitElement {
       </style>`
           : html``
       }
-      <div id="container" style="">
+      <div id="container" style=${this.getContainerStyles()}>
         <slot></slot>
       </div>
   `;
@@ -66,6 +64,12 @@ class HTLayoutRow extends LitElement {
   constructor() {
     super();
     this.card = false;
+  }
+
+  getContainerStyles() {
+    let styles = `max-width: ${this.containerWidth};`;
+    if (this.card) styles += "background:#fff;";
+    return styles;
   }
 }
 
