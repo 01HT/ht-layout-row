@@ -6,22 +6,18 @@ class HTLayoutRow extends LitElement {
     return html`
       <style>
         :host {
-          display: flex;
-          justify-content:center;
-          padding:16px;
-          overflow:hidden;
-          min-height: calc(100vh - 64px);
+          display:block;
           box-sizing: border-box;
+          overflow:hidden;
+          position:relative;
+          padding:16px;
         }
 
         #container {
           display:flex;
-          flex-wrap:wrap;
-          flex-grow:1;
-          max-width: 1440px;
           position:relative;
+          box-sizing: border-box;
           padding:16px;
-          //overflow:hidden;
         }
 
         @media (max-width:600px) {
@@ -31,8 +27,8 @@ class HTLayoutRow extends LitElement {
         }
       </style>
       ${
-        card
-          ? html`<style>
+      card
+        ? html`<style>
       :host {
         background:#eceff1;
       }
@@ -42,7 +38,7 @@ class HTLayoutRow extends LitElement {
           0 3px 1px -2px rgba(0, 0, 0, 0.2);
       }
       </style>`
-          : html``
+        : html``
       }
       <div id="container" style=${this.getContainerStyles()}>
         <slot></slot>
