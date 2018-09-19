@@ -1,11 +1,11 @@
 {
   "name": "@01ht/ht-layout-row",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "ht-layout-row.js",
   "repository": "01ht/ht-layout-row",
-  "author": "01ht Ltd",
+  "author": "01HT Ltd",
   "license": "UNLICENSED",
   "dependencies": {
-    "@polymer/lit-element": "^0.5.1"
+    "@polymer/lit-element": "^0.6.1"
   }
 }

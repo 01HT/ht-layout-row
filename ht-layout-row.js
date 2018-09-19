@@ -2,7 +2,8 @@
 import { LitElement, html } from "@polymer/lit-element";
 
 class HTLayoutRow extends LitElement {
-  _render({ card, containerWidth }) {
+  render() {
+    const { card } = this;
     return html`
       <style>
         :host {
@@ -27,8 +28,8 @@ class HTLayoutRow extends LitElement {
         }
       </style>
       ${
-      card
-        ? html`<style>
+        card
+          ? html`<style>
       :host {
         background:#eceff1;
       }
@@ -38,7 +39,7 @@ class HTLayoutRow extends LitElement {
           0 3px 1px -2px rgba(0, 0, 0, 0.2);
       }
       </style>`
-        : html``
+          : html``
       }
       <div id="container" style=${this.getContainerStyles()}>
         <slot></slot>
@@ -52,8 +53,8 @@ class HTLayoutRow extends LitElement {
 
   static get properties() {
     return {
-      card: Boolean,
-      containerWidth: String
+      card: { type: Boolean },
+      containerWidth: { type: String }
     };
   }
 
