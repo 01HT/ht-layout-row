@@ -1,32 +1,33 @@
 "use strict";
-import { LitElement, html } from "@polymer/lit-element";
+import { LitElement, html, css } from "lit-element";
 
 class HTLayoutRow extends LitElement {
+  static styles = css`<style>
+    :host {
+      display:block;
+      box-sizing: border-box;
+      overflow:hidden;
+      position:relative;
+      padding:16px;
+    }
+
+    #container {
+      display:flex;
+      position:relative;
+      box-sizing: border-box;
+      padding:16px;
+    }
+
+    @media (max-width:600px) {
+      :host {
+        padding:0;
+      }
+    }
+  </style>`;
+
   render() {
     const { card } = this;
     return html`
-      <style>
-        :host {
-          display:block;
-          box-sizing: border-box;
-          overflow:hidden;
-          position:relative;
-          padding:16px;
-        }
-
-        #container {
-          display:flex;
-          position:relative;
-          box-sizing: border-box;
-          padding:16px;
-        }
-
-        @media (max-width:600px) {
-          :host {
-            padding:0;
-          }
-        }
-      </style>
       ${
         card
           ? html`<style>
@@ -41,14 +42,10 @@ class HTLayoutRow extends LitElement {
       </style>`
           : html``
       }
-      <div id="container" style=${this.getContainerStyles()}>
+      <div id="container" style="${this.getContainerStyles()}">
         <slot></slot>
       </div>
   `;
-  }
-
-  static get is() {
-    return "ht-layout-row";
   }
 
   static get properties() {
@@ -70,4 +67,4 @@ class HTLayoutRow extends LitElement {
   }
 }
 
-customElements.define(HTLayoutRow.is, HTLayoutRow);
+customElements.define("ht-layout-row", HTLayoutRow);
