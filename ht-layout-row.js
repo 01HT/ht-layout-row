@@ -2,28 +2,30 @@
 import { LitElement, html, css } from "lit-element";
 
 class HTLayoutRow extends LitElement {
-  static styles = css`<style>
-    :host {
-      display:block;
-      box-sizing: border-box;
-      overflow:hidden;
-      position:relative;
-      padding:16px;
-    }
-
-    #container {
-      display:flex;
-      position:relative;
-      box-sizing: border-box;
-      padding:16px;
-    }
-
-    @media (max-width:600px) {
+  static get styles() {
+    return css`
       :host {
-        padding:0;
+        display: block;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        padding: 16px;
       }
-    }
-  </style>`;
+
+      #container {
+        display: flex;
+        position: relative;
+        box-sizing: border-box;
+        padding: 16px;
+      }
+
+      @media (max-width: 600px) {
+        :host {
+          padding: 0;
+        }
+      }
+    `;
+  }
 
   render() {
     const { card } = this;
