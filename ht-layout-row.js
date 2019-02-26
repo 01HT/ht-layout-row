@@ -16,7 +16,7 @@ class HTLayoutRow extends LitElement {
         display: flex;
         position: relative;
         box-sizing: border-box;
-        padding: 16px;
+        padding: 16px 16px 32px 16px;
       }
 
       @media (max-width: 600px) {
